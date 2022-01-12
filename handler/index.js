@@ -29,9 +29,9 @@ const globPromise = promisify(glob);
         // const f = await client.application.commands.fetch()
         // f.forEach(cmd => cmd.delete())
         //await client.application.commands.set(ArrayOfApplicationCommands); // if you want to update every guild the server is in (up to 1 hour for the update to complete)
-        await client.guilds.cache.get("YOUR_SERVER_ID").commands.set(ArrayOfApplicationCommands); // if you want to update only one guild (instant update)
+        await client.guilds.cache.get(process.env.SebiTownhall).commands.set(ArrayOfApplicationCommands); // if you want to update only one guild (instant update)
         console.log("Commands Loaded!")
-        client.user.setActivity("Bot Template by Sebi • V1.0.0", { type: "WATCHING" });
+        client.user.setActivity("Sebi's Townhall", { type: "WATCHING" });
         
     });
 };
